@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import {
   AppBar, Toolbar, Typography, IconButton, Box, Chip,
-  Popover, List, ListItem, ListItemText, Badge, Tooltip,
+  Popover, List, ListItem, Badge, Tooltip,
   Divider, Button, Avatar,
 } from '@mui/material';
 import { alpha } from '@mui/material/styles';

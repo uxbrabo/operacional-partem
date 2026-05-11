@@ -113,12 +113,12 @@ export function FilterBar({ filters, onChange, onReset }: Props) {
           clickable
           onDelete={onReset}
           size="small"
-          sx={(theme) => ({
+          sx={{
             fontWeight: 600, height: 32,
             bgcolor: alpha('#DC2626', 0.10),
             color: '#DC2626',
             border: `1px solid ${alpha('#DC2626', 0.25)}`,
-          })}
+          }}
           deleteIcon={<ClearIcon sx={{ fontSize: 14, color: '#DC2626 !important' }} />}
           onClick={onReset}
         />
