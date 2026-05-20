@@ -60,21 +60,12 @@ export function Login() {
         {/* Logo area */}
         <Box sx={{ textAlign: 'center', mb: 4 }}>
           <Box
-            sx={{
-              width: 64, height: 64, bgcolor: '#000', borderRadius: '18px',
-              display: 'inline-flex', alignItems: 'center', justifyContent: 'center',
-              mb: 2, boxShadow: '0 8px 32px rgba(0,0,0,0.4)',
-            }}
-          >
-            <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
-              <path d="M20 80V20h30c16 0 28 10 28 26s-12 26-28 26H44v8h-8l-16 0zM44 60h6c10 0 16-6 16-14s-6-14-16-14H44v28z" fill="#2D9D4E"/>
-              <path d="M44 60h16c8 0 12 4 12 10s-4 10-12 10H44V60z" fill="#fff" opacity="0.7"/>
-            </svg>
-          </Box>
-          <Typography variant="h4" sx={{ fontWeight: 800, color: '#fff', letterSpacing: '-0.01em' }}>
-            partem
-          </Typography>
-          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.65)', mt: 0.5 }}>
+            component="img"
+            src="/Logo-branca.svg"
+            alt="Partem"
+            sx={{ height: 52, width: 'auto', objectFit: 'contain', mb: 2 }}
+          />
+          <Typography variant="body2" sx={{ color: 'rgba(255,255,255,0.65)' }}>
             Sistema Operacional Interno
           </Typography>
         </Box>

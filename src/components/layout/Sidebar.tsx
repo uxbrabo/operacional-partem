@@ -3,6 +3,7 @@ import {
   Box, Drawer, List, ListItemButton, ListItemIcon, ListItemText,
   Typography, Divider, Avatar,
 } from '@mui/material';
+import { useTheme } from '@mui/material/styles';
 import DashboardIcon from '@mui/icons-material/Dashboard';
 import HomeIcon from '@mui/icons-material/Home';
 import PeopleIcon from '@mui/icons-material/People';
@@ -44,6 +45,8 @@ export function Sidebar({ open, onClose, variant }: Props) {
   const navigate = useNavigate();
   const location = useLocation();
   const { user, logout } = useAuth();
+  const theme = useTheme();
+  const isDark = theme.palette.mode === 'dark';
 
   function isActive(path: string) {
     if (path === '/') return location.pathname === '/';
@@ -58,21 +61,13 @@ export function Sidebar({ open, onClose, variant }: Props) {
   const content = (
     <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', bgcolor: 'background.paper' }}>
       {/* Logo */}
-      <Box sx={{ px: 3, py: 2.5, display: 'flex', alignItems: 'center', gap: 1.5 }}>
+      <Box sx={{ px: 3, py: 2.5 }}>
         <Box
           component="img"
-          src="/partem-icon.svg"
+          src={isDark ? '/Logo-branca.svg' : '/Logo-preta.svg'}
           alt="Partem"
-          sx={{ width: 40, height: 40, borderRadius: '10px', objectFit: 'contain' }}
+          sx={{ height: 32, width: 'auto', objectFit: 'contain' }}
         />
-        <Box>
-          <Typography variant="h6" sx={{ fontSize: '1.1rem', fontWeight: 800, color: 'text.primary', lineHeight: 1 }}>
-            partem
-          </Typography>
-          <Typography variant="caption" sx={{ color: 'text.secondary', fontSize: '0.65rem' }}>
-            Operacional
-          </Typography>
-        </Box>
       </Box>
 
       <Divider sx={{ mx: 2, mb: 1 }} />
